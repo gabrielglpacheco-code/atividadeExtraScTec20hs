@@ -1,0 +1,160 @@
+<!DOCTYPE html> <!--Definição de estrutura do site-->
+<html lang="pt-br"> <!--Idioma do site-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio do Gabriel</title> <!--Título da aba-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cabecalho">
+        <header> <!-- Cabeçalho visível-->
+            <h1>Gabriel Guarnieri Lisboa Pacheco</h1> <!-- Título principal-->
+            <img src="Male07.3.webp" alt="Imagem de foto de perfil" title="Imagem de perfil de Gabriel" class="img">
+            <!--Inserção de imagem-->
+        </header>
+    </div>
+
+    <div>
+        <nav> <!--Menu de navegação-->
+            <ul> <!--Lista não ordenada para links do menu-->
+                <li><a href="#sobre">Sobre mim</a></li> <!--Links Navegáveis-->
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="https://github.com/gabrielglpacheco-code" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/gabriel-pacheco-738705128" target="_blank">LinkedIn</a></li>
+                <!--Link abrirá em nova aba devido ao comando target="_blank"-->
+            </ul>
+        </nav>
+    </div>
+
+    <div>
+        <section id="sobre"> <!--Primeira seção do site-->
+            <h2>Sobre mim</h2> <!--Título menor-->
+            <article> <!--Artigo principal da sessão-->
+                <p>Eu sou o Gabriel, técnico de informática autônomo, eterno estudante e futuro desenvolvedor de
+                    software.</p>
+            </article>
+        </section>
+    </div>
+
+    <div>
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <table> <!--Cria tabela-->
+                <thead> <!--Cabeça da tabela-->
+                    <tr> <!--Colunas da tabela-->
+                        <th>Tecnologia</th>
+                        <th>Nível</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Iniciante</td>
+                        <td>Capaz de construir estruturas de páginas web semânticas e responsivas.</td>
+                    </tr>
+
+                    <tr>
+                        <td>CSS</td>
+                        <td>Básico</td>
+                        <td>Experiência com Flexbox, Grid e animações.</td>
+                    </tr>
+
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Básico</td>
+                        <td>Desenvolvimento de scripts do lado do cliente para interações.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <div>
+        <section id="projetos">
+
+            <h2>Projetos</h2>
+            <p>Este foi o primeiro site que desenvolvi estudando front end.</p>
+            <div>
+                <h3>Escolha seu idioma de boas vindas</h3>
+                <p>Aplicação básica usada para demonstrar a capacidade de criar funções em JavaScript.</p>
+                <p>Tecnologias utilizadas: HTML, CSS e JavaScript.</p>
+                <label for="idioma">Idioma: </label>
+                <select name="" id="idioma">
+                    <option value="">Selecione uma opção</option>
+                    <option value="portugues">Português</option>
+                    <option value="ingles">Inglês</option>
+                    <option value="espanhol">Espanhol</option>
+                    <option value="frances">Francês</option>
+                </select>
+                <button onclick="selecionaLingua()">Quero esse</button>
+                <p id="benvindo"></p>
+            </div>
+
+            <div>
+                <h3>Validação de formulário</h3>
+                <p>Aplicação básica para demonstrar a capacidade de criar uma validação de formulário através de função
+                    em JavaScript.</p>
+                <p>Tecnologias utilizadas: HTML e JavaScript.</p>
+                <form id="contactForm">
+                    <label for="name">Nome: </label>
+                    <input type="text" id="name" required maxlength="256" placeholder="Digite seu nome"> <br> <br>
+                    <label for="email">Email: </label>
+                    <input type="email" id="emailv" required maxlength="256" placeholder="Digite seu Email"> <br> <br>
+                    <label for="message">Mensagem: </label> <br> <br>
+                    <textarea name="message" id="message" required placeholder="Digite sua mensagem" cols="20"
+                        rows="5"></textarea> <br> <br>
+                    <button onclick="validateForm()" type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <div>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Tem um projeto em mente? Entre em contato comigo!</p>
+            <form action="">
+                <!--Sessão de preenchimento de formulário por parte do usuário, action será usado para linkar com um database-->
+                <label for="nome">Nome: </label> <br>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome"> <br> <br>
+                <label for="email">Email: </label> <br>
+                <input type="email" id="email" name="email" required placeholder="Digite seu Email"> <br> <br>
+                <label for="telefone">Telefone: </label> <br>
+                <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone"> <br> <br>
+                <label for="assunto">Assunto: </label> <br> <!--Opções selecionáveis pelo usuário-->
+                <select name="assunto" id="assunto">
+                    <option value="orcamento">Orçamento</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="outro">Outro</option>
+                </select> <br> <br>
+                <label for="mensagem">Mensagem: </label> <br> <!--Campo de texto-->
+                <textarea name="mensagem" id="mensagem" cols="20" rows="5" required placeholder="Digite sua mensagem"></textarea> <br> <br>
+                <input type="checkbox" id="inscricao" name="inscricao">
+                <label for="inscricao">Deseja receber minha Newsletter? Fique por dentro.</label>
+                <input type="submit" value="Enviar mensagem"> <br> <br>
+            </form>
+
+            <address>
+                Email: <a href="mailto:gabrielglpacheco@gmail.com">gabrielglpacheco@gmail.com</a> <br>
+                <!--Pula linha <br>-->
+                Telefone: <a href="tel:+5548999874650">(48)99987-4650</a>
+            </address>
+        </section>
+    </div>
+
+    <footer>
+        <p>Direitos reservados a Gabriel.</p>
+    </footer>
+
+    <script src="script.js"></script> <!--Script foi colocado aqui para ser iniciado após a div ser carregada-->
+</body>
+
+</html>
